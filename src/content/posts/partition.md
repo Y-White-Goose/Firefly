@@ -1,7 +1,13 @@
 ---
 title: VLSI 电路划分
 published: 2026-05-06
-description: 展示 Firefly 主题对 KaTeX 数学公式的支持，包括行内公式、块级公式和复杂数学符号。
+description: VLSI 中电路划分的三种贪心算法
+pinned: true    # 置顶
+tags: [Foo, Bar]
+category: VLSI
+draft: false
+lang: zh-CN      # 仅当文章语言与 `siteConfig.ts` 中的网站语言不同时需要设置
+comment: true    # 是否允许评论
 ---
 
 ## 贪心算法
@@ -72,7 +78,9 @@ Output: 划分 X, X'
 
 例如：
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 145634.png" width="50%" height="50%" alt="图片描述" align="center" />
+<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 145634.png" 
+     alt="图片描述" 
+     style="display: block; margin: 0 auto; width: 70%; height: auto;" />
 
 $D_A = 2-1 = 1$、$D_B = 1-1=0$、$gain(A,B) = D_A + D_B - 2c_{AB}$
 
@@ -163,7 +171,7 @@ Output: 划分 X, X'
 
 - 在搜索最大割代价收益时，从最大收益处开始搜索，而不再需要依次搜索比较，可以显著加快最大收益的检索速度。
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 161921.png" width="50%" height="50%" alt="图片描述" align="center" />
+<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 161921.png" alt="图片描述" style="display: block; margin: 0 auto; width: 80%; height: auto;" />
 
 1.  **桶数组（左侧）**
     每个桶对应一个固定的收益值，从上到下依次是：
@@ -178,9 +186,9 @@ Output: 划分 X, X'
 
 #### 割代价收益
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 181913.png" width="50%" height="50%" alt="图片描述" align="center" />
+<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 181913.png"  alt="图片描述"  style="display: block; margin: 0 auto; width: 60%; height: auto;" />
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 182007.png" width="50%" height="50%" alt="图片描述" align="center" />
+<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 182007.png" alt="图片描述" style="display: block; margin: 0 auto; width: 50%; height: auto;" />
 
 遍历一个顶点相连的所有超边，FM 算法在超图划分中的初始收益公式：$\text{gain}(i) = \text{FS}(i) - \text{TE}(i)$
 
@@ -279,7 +287,7 @@ Output: 划分 X, X'
 
 相反，若先移动 A，则移动与 A 相连的小模块收益一般，下一步的移动中不能收获较高的收益，始终存在相连的模块被分割的情况。
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 195843.png" width="50%" height="50%" alt="图片描述" align="center" />
+<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 195843.png" alt="图片描述" style="display: block; margin: 0 auto; width: 100%; height: auto;"  />
 
 
 
