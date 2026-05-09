@@ -19,7 +19,7 @@ export const zh_TW: Translation = {
 	[Key.categories]: "分類",
 	[Key.recentPosts]: "最新文章",
 	[Key.postList]: "文章列表",
-	[Key.tableOfContents]: "目錄",
+	[Key.tableOfContents]: "文章目錄",
 	[Key.tocEmpty]: "目前頁面沒有目錄",
 	[Key.music]: "音樂",
 	[Key.musicNoPlaying]: "暫未播放",
@@ -208,6 +208,7 @@ export const zh_TW: Translation = {
 	// 壁紙模式
 	[Key.wallpaperMode]: "壁紙模式",
 	[Key.wallpaperBannerMode]: "橫幅壁紙",
+	[Key.wallpaperFullscreenMode]: "全屏壁紙",
 	[Key.wallpaperOverlayMode]: "全屏透明",
 	[Key.wallpaperNoneMode]: "純色背景",
 
@@ -216,6 +217,7 @@ export const zh_TW: Translation = {
 	[Key.bannerTitle]: "首頁橫幅標題",
 	[Key.bannerCarousel]: "橫幅輪播",
 	[Key.wavesAnimation]: "水波紋動畫",
+	[Key.gradientTransition]: "漸變過渡",
 	[Key.overlaySettings]: "透明設定",
 	[Key.overlayOpacity]: "桌布透明度",
 	[Key.overlayBlur]: "背景模糊度",
