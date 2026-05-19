@@ -1,9 +1,9 @@
 ---
-title: VLSI 电路划分
+title: VLSI 电路划分贪心算法
 published: 2026-05-06
 description: VLSI 中电路划分的三种贪心算法
 pinned: true    # 置顶
-tags: [Foo, Bar]
+tags: [VLSI]
 category: VLSI
 draft: false
 lang: zh-CN      # 仅当文章语言与 `siteConfig.ts` 中的网站语言不同时需要设置
@@ -78,9 +78,8 @@ Output: 划分 X, X'
 
 例如：
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 145634.png" 
-     alt="图片描述" 
-     style="display: block; margin: 0 auto; width: 70%; height: auto;" />
+![](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20145634.png)
+
 
 $D_A = 2-1 = 1$、$D_B = 1-1=0$、$gain(A,B) = D_A + D_B - 2c_{AB}$
 
@@ -171,7 +170,7 @@ Output: 划分 X, X'
 
 - 在搜索最大割代价收益时，从最大收益处开始搜索，而不再需要依次搜索比较，可以显著加快最大收益的检索速度。
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 161921.png" alt="图片描述" style="display: block; margin: 0 auto; width: 80%; height: auto;" />
+<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 161921.png" alt="图片描述" style="display: block; margin: 0 auto; width: 100%; height: auto;" />
 
 1.  **桶数组（左侧）**
     每个桶对应一个固定的收益值，从上到下依次是：
@@ -186,9 +185,8 @@ Output: 划分 X, X'
 
 #### 割代价收益
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 181913.png"  alt="图片描述"  style="display: block; margin: 0 auto; width: 60%; height: auto;" />
+<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 181913.png"  alt="图片描述"  style="display: block; margin: 0 auto; width: 100%; height: auto;" />
 
-<img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 182007.png" alt="图片描述" style="display: block; margin: 0 auto; width: 50%; height: auto;" />
 
 遍历一个顶点相连的所有超边，FM 算法在超图划分中的初始收益公式：$\text{gain}(i) = \text{FS}(i) - \text{TE}(i)$
 
@@ -205,70 +203,31 @@ Output: 划分 X, X'
 
 逐条超边计算 $FS(c) = 1$ 和 $TE(c) = 0$，$\text{gain}(c) = \text{FS}(c) - \text{TE}(c) = 1 - 0 = 1$
 
-<table style="border:none;text-align:center;width:auto;margin: 0 auto;">
-	<tbody>
-		<tr>
-			<!-- 修复：给 style 属性添加闭合引号 "，确保样式生效 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 192635.png" style="width: 300px; height: auto;"> </td>
-			<!-- 优化：给第二幅图也添加相同尺寸，避免两张图大小不一致 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 192642.png" style="width: 300px; height: auto;"> </td>
-		</tr>
-        <tr>
-		</tr>
-	</tbody>
-</table>
+[grid]
+![step 1](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20192635.png)
+![step 2](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20192642.png)
+[/grid]
 
-<table style="border:none;text-align:center;width:auto;margin: 0 auto;">
-	<tbody>
-		<tr>
-			<!-- 修复：给 style 属性添加闭合引号 "，确保样式生效 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 192741.png" style="width: 300px; height: auto;"> </td>
-			<!-- 优化：给第二幅图也添加相同尺寸，避免两张图大小不一致 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 192810.png" style="width: 300px; height: auto;"> </td>
-		</tr>
-        <tr>
-		</tr>
-	</tbody>
-</table>
+[grid]
+![step 3](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20192741.png)
+![step 4](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20192810.png)
+[/grid]
 
-<table style="border:none;text-align:center;width:auto;margin: 0 auto;">
-	<tbody>
-		<tr>
-			<!-- 修复：给 style 属性添加闭合引号 "，确保样式生效 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 192821.png" style="width: 300px; height: auto;"> </td>
-			<!-- 优化：给第二幅图也添加相同尺寸，避免两张图大小不一致 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 192827.png" style="width: 300px; height: auto;"> </td>
-		</tr>
-        <tr>
-		</tr>
-	</tbody>
-</table>
+[grid]
+![step 5](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20192821.png)
+![step 6](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20192827.png)
+[/grid]
 
-<table style="border:none;text-align:center;width:auto;margin: 0 auto;">
-	<tbody>
-		<tr>
-			<!-- 修复：给 style 属性添加闭合引号 "，确保样式生效 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 193035.png" style="width: 300px; height: auto;"> </td>
-			<!-- 优化：给第二幅图也添加相同尺寸，避免两张图大小不一致 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 193040.png" style="width: 300px; height: auto;"> </td>
-		</tr>
-        <tr>
-		</tr>
-	</tbody>
-</table>
+[grid]
+![step 7](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20193035.png)
+![step 8](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20193040.png)
+[/grid]
 
-<table style="border:none;text-align:center;width:auto;margin: 0 auto;">
-	<tbody>
-		<tr>
-			<!-- 修复：给 style 属性添加闭合引号 "，确保样式生效 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 193052.png" style="width: 300px; height: auto;"> </td>
-			<!-- 优化：给第二幅图也添加相同尺寸，避免两张图大小不一致 -->
-			<td style="padding: 6px"> <img src="https://img.whitegoose.dpdns.org/image/屏幕截图 2026-05-04 193753.png" style="width: 350px; height: auto;"> </td>
-		</tr>
-        <tr>
-		</tr>
-	</tbody>
-</table>
+[grid]
+![step 9](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20193052.png)
+![result](https://img.whitegoose.dpdns.org/image/屏幕截图%202026-05-04%20193753.png)
+[/grid]
+
 
 #### 复杂度分析
 
@@ -294,22 +253,4 @@ Output: 划分 X, X'
 ---
 
 ### 多层次划分算法
-
-
-
----
-
----
-
-## 搜索算法
-
-### 模拟退火
-
-
-
-## 分析算法
-
-### 谱聚类
-
-### 基于网络流算法
 
