@@ -510,33 +510,6 @@ export type SpineModelConfig = {
 	opacity?: number; // 透明度，0-1，默认1.0
 };
 
-// Live2D 看板娘配置
-export type Live2DModelConfig = {
-	enable: boolean; // 是否启用 Live2D 看板娘
-	model: {
-		path: string; // 模型文件夹路径或model3.json文件路径
-	};
-	position?: {
-		corner?: "bottom-left" | "bottom-right" | "top-left" | "top-right"; // 显示位置，默认bottom-right
-		offsetX?: number; // 水平偏移量，默认20px
-		offsetY?: number; // 垂直偏移量，默认20px
-	};
-	size?: {
-		width?: number; // 容器宽度，默认280px
-		height?: number; // 容器高度，默认250px
-	};
-	interactive?: {
-		enabled?: boolean; // 是否启用交互功能，默认true
-		// motions 和 expressions 将从模型 JSON 文件中自动读取
-		clickMessages?: string[]; // 点击时随机显示的文字消息
-		messageDisplayTime?: number; // 文字显示时间（毫秒），默认3000
-	};
-	responsive?: {
-		hideOnMobile?: boolean; // 是否在移动端隐藏，默认false
-		mobileBreakpoint?: number; // 移动端断点，默认768px
-	};
-};
-
 export type BackgroundWallpaperConfig = {
 	mode: "banner" | "fullscreen" | "overlay" | "none"; // 壁纸模式：banner横幅模式、fullscreen全屏壁纸、overlay全屏透明覆盖模式或none纯色背景
 	switchable?: boolean; // 是否允许用户通过导航栏切换壁纸模式，默认true
@@ -780,6 +753,8 @@ export type GalleryAlbum = {
 	location?: string; // 拍摄地点
 	tags?: string[]; // 标签（用于首页筛选）
 	cover?: string; // 手动指定封面（可选，省略则自动取 cover.* 或第一张）
+	password?: string; // 加密密码（非空时启用加密）
+	passwordHint?: string; // 密码提示
 };
 
 // 相册配置
