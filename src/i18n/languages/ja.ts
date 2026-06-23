@@ -71,6 +71,8 @@ export const ja: Translation = {
 	[Key.minutesCount]: "分",
 	[Key.postCount]: "投稿",
 	[Key.postsCount]: "投稿",
+	[Key.tagsCount]: "タグ",
+	[Key.noData]: "データなし",
 
 	[Key.themeColor]: "テーマカラー",
 
@@ -278,6 +280,20 @@ export const ja: Translation = {
 	[Key.siteStatsDays]: "{days} 日",
 	[Key.today]: "今日",
 
+	// サイト情報
+	[Key.siteInfo]: "サイト情報",
+	[Key.siteInfoBuildTime]: "ビルド日時",
+	[Key.siteInfoBuildPlatform]: "ビルドプラットフォーム",
+	[Key.siteInfoBlogVersion]: "ブログバージョン",
+	[Key.siteInfoAstroVersion]: "Astro バージョン",
+	[Key.siteInfoNodeVersion]: "Node バージョン",
+	[Key.siteInfoPnpmVersion]: "pnpm バージョン",
+	[Key.siteInfoSystem]: "システム情報",
+	[Key.siteInfoExpand]: "ビルド情報を展開",
+	[Key.siteInfoCollapse]: "ビルド情報を折畳む",
+	[Key.siteInfoDomain]: "ドメイン",
+	[Key.siteInfoLicense]: "ライセンス",
+
 	// カレンダーコンポーネント
 	[Key.calendarSunday]: "日",
 	[Key.calendarMonday]: "月",
@@ -300,6 +316,7 @@ export const ja: Translation = {
 	[Key.calendarDecember]: "12月",
 	[Key.calendar]: "サイトカレンダー",
 	[Key.calendarHeatmapWeek]: "{month}月第{week}週、{count}記事",
+	[Key.advertisement]: "広告",
 
 	[Key.shareArticle]: "共有",
 	[Key.generatingPoster]: "ポスター生成中...",
@@ -333,4 +350,11 @@ export const ja: Translation = {
 	[Key.passwordError]: "パスワードが間違っています。もう一度お試しください。",
 	[Key.passwordProtectedRss]:
 		"この記事は暗号化されています。ウェブサイトにアクセスしてご覧ください。",
+
+	// 背景動画プレイヤー
+	[Key.videoPlay]: "背景動画を再生",
+	[Key.videoPause]: "背景動画を一時停止",
+	[Key.videoPrev]: "前の動画",
+	[Key.videoNext]: "次の動画",
+	[Key.videoLoadError]: "動画の読み込みに失敗しました",
 };
